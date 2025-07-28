@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  AiOutlineRocket, 
+  AiOutlineFileText, 
+  AiOutlineDown 
+} from 'react-icons/ai';
 
 const Home: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -74,15 +79,16 @@ const Home: React.FC = () => {
           
           <div className="hero-buttons">
             <Link to="/projects" className="hero-btn primary-btn" onClick={handleButtonClick}>
-              EXPLORE MY WORK
+              <AiOutlineRocket /> EXPLORE MY WORK
             </Link>
             <Link to="/skills" className="hero-btn" onClick={handleButtonClick}>
-              VIEW RESUME
+              <AiOutlineFileText /> VIEW RESUME
             </Link>
           </div>
           
           <div className="scroll-indicator">
             <span>✓ SCROLL TO EXPLORE</span>
+            <AiOutlineDown className="scroll-arrow" />
           </div>
         </div>
       </div>

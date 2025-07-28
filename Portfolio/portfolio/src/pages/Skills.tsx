@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
+import { 
+  AiOutlineBook, 
+  AiOutlineThunderbolt, 
+  AiOutlineTrophy,
+  AiOutlineRocket
+} from 'react-icons/ai';
 
 const skillsData = [
   {
     title: 'EDUCATION',
+    icon: AiOutlineBook,
     content: (
       <div>
         <div className="resume-item">
@@ -48,6 +55,7 @@ const skillsData = [
   },
   {
     title: 'TECHNICAL SKILLS',
+    icon: AiOutlineThunderbolt,
     content: (
       <div>
         <div className="skills-grid">
@@ -101,6 +109,7 @@ const skillsData = [
   },
   {
     title: 'EXPERIENCES',
+    icon: AiOutlineTrophy,
     content: (
       <div>
         <div className="resume-item">
@@ -125,6 +134,7 @@ const skillsData = [
   },
   {
     title: 'PROJECTS',
+    icon: AiOutlineRocket,
     content: (
       <div>
         <div className="project-item">
@@ -168,6 +178,7 @@ const Skills: React.FC = () => {
               className="resume-section-btn interactive-element"
               onClick={() => setOpen(open === idx ? null : idx)}
             >
+              <span className="section-icon"><section.icon /></span>
               <span className="section-title">{section.title}</span>
               <span className="section-arrow">{open === idx ? '▲' : '▼'}</span>
             </button>

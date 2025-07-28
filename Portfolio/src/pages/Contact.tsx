@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
-import { 
-  AiOutlineMail, 
-  AiOutlineLinkedin, 
-  AiOutlineGithub, 
-  AiOutlineCheckCircle 
-} from 'react-icons/ai';
 
 const Contact: React.FC = () => {
+  const email = 'aniket.kumar@email.com';
   const [copied, setCopied] = useState(false);
-  const email = 'aniket.kumar2009@icloud.com';
-
+  
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error('Failed to copy email:', err);
     }
   };
 
   const contactInfo = [
     {
       title: 'EMAIL',
-      icon: AiOutlineMail,
+      icon: '✉️',
       content: email,
       action: 'COPY',
       onClick: handleCopy,
@@ -31,7 +25,7 @@ const Contact: React.FC = () => {
     },
     {
       title: 'LINKEDIN',
-      icon: AiOutlineLinkedin,
+      icon: '💼',
       content: 'linkedin.com/in/aniketkumar',
       action: 'VISIT',
       link: 'https://linkedin.com/in/aniketkumar',
@@ -39,15 +33,15 @@ const Contact: React.FC = () => {
     },
     {
       title: 'GITHUB',
-      icon: AiOutlineGithub,
-      content: 'github.com/graphixrrr',
+      icon: '🐙',
+      content: 'github.com/aniketkumar',
       action: 'VISIT',
-      link: 'https://github.com/graphixrrr',
+      link: 'https://github.com/aniketkumar',
       isLink: true
     },
     {
       title: 'AVAILABILITY',
-      icon: AiOutlineCheckCircle,
+      icon: '✅',
       content: 'Open to new opportunities and collaborations',
       action: 'STATUS',
       isStatus: true
@@ -55,7 +49,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="contact-page page-container">
+    <div className="contact-page">
       <h1 className="page-title">CONTACT</h1>
       
       <div className="contact-intro">
@@ -72,7 +66,7 @@ const Contact: React.FC = () => {
           {contactInfo.map((item, index) => (
             <div key={item.title} className="contact-item interactive-element">
               <div className="contact-item-header">
-                <span className="contact-icon"><item.icon /></span>
+                <span className="contact-icon">{item.icon}</span>
                 <h4>{item.title}</h4>
               </div>
               
@@ -106,26 +100,29 @@ const Contact: React.FC = () => {
                       {item.action} →
                     </a>
                   </div>
-                ) : item.isStatus ? (
-                  <div className="status-container">
-                    <span className="status-text">{item.content}</span>
-                    <span className="status-indicator">AVAILABLE</span>
-                  </div>
                 ) : (
-                  <span>{item.content}</span>
+                  <div className="status-container">
+                    <p className="status-text">{item.content}</p>
+                    <span className="status-indicator">Available</span>
+                  </div>
                 )}
               </div>
             </div>
           ))}
         </div>
-      </div>
-      
-      <div className="contact-footer">
-        <h2>Let's Build Something Amazing Together</h2>
-        <p>Ready to start a conversation? I'm here to help bring your vision to life.</p>
-        <a href={`mailto:${email}`} className="contact-cta-btn">
-          START A CONVERSATION
-        </a>
+
+        <div className="contact-footer">
+          <div className="contact-message">
+            <h4>Let's Work Together</h4>
+            <p>Whether you have a project in mind, want to discuss opportunities, or just want to say hello, I'd love to hear from you!</p>
+          </div>
+          
+          <div className="contact-cta">
+            <a href={`mailto:${email}`} className="cta-button">
+              SEND MESSAGE
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

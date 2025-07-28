@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { 
+  AiOutlineUser, 
+  AiOutlineSetting, 
+  AiOutlineHeart 
+} from 'react-icons/ai';
 
 const About: React.FC = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
@@ -17,7 +22,7 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(0)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3>WHO I AM</h3>
+          <h3><AiOutlineUser /> WHO I AM</h3>
           <p>
             Hi! I'm Aniket Kumar, a passionate full-stack developer with a deep love for creating 
             beautiful and functional web applications. I enjoy learning new technologies, solving complex problems, 
@@ -30,7 +35,7 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(1)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3>MY APPROACH</h3>
+          <h3><AiOutlineSetting /> MY APPROACH</h3>
           <p>
             I believe in creating experiences that are not just functional, but also visually stunning 
             and user-friendly. Every project is an opportunity to push boundaries, innovate, and deliver 
@@ -43,7 +48,7 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(2)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3>MY PASSION</h3>
+          <h3><AiOutlineHeart /> MY PASSION</h3>
           <p>
             From coding to problem-solving, I'm driven by curiosity and the desire to create something 
             meaningful. Technology is my canvas, code is my paintbrush, and innovation is my muse. 
