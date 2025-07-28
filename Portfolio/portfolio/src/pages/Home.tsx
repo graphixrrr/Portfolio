@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  AiOutlineRocket, 
-  AiOutlineFileText, 
-  AiOutlineDown 
-} from 'react-icons/ai';
+import { FaRocket, FaFileAlt, FaArrowDown, FaCode, FaUser } from 'react-icons/fa';
 
 const Home: React.FC = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [typewriterText, setTypewriterText] = useState('');
   const [typewriterIndex, setTypewriterIndex] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
 
-  const texts = [
+  const texts = useMemo(() => [
     'FULL-STACK DEVELOPER',
     'PROBLEM SOLVER',
     'INNOVATOR',
     'CREATIVE THINKER',
     'TECH ENTHUSIAST'
-  ];
+  ], []);
 
   // Typewriter effect for the dynamic text
   useEffect(() => {
@@ -36,7 +31,7 @@ const Home: React.FC = () => {
       }, 2000);
       return () => clearTimeout(timeout);
     }
-  }, [typewriterText, textIndex, typewriterIndex, isTyping, texts]);
+  }, [typewriterText, textIndex, typewriterIndex, texts]);
 
   const handleButtonClick = (e: React.MouseEvent) => {
     const button = e.currentTarget as HTMLAnchorElement;
@@ -63,7 +58,10 @@ const Home: React.FC = () => {
       <div className="hero-section">
         <div className="hero-content">
           <h1 className="hero-title">
-            <span className="hero-greeting">HELLO, I'M</span>
+            <span className="hero-greeting">
+              <FaUser className="icon-greeting" />
+              HELLO, I'M{' '}
+            </span>
             <span className="hero-name">ANIKET KUMAR</span>
             <div className="typing-text">
               <span className="text-prefix">I AM A </span>
@@ -73,22 +71,25 @@ const Home: React.FC = () => {
           </h1>
           
           <p className="hero-description">
+            <FaCode className="icon-description" />
             Passionate about creating innovative solutions and turning ideas into reality through code.
             Let's build something amazing together.
           </p>
           
           <div className="hero-buttons">
             <Link to="/projects" className="hero-btn primary-btn" onClick={handleButtonClick}>
-              <AiOutlineRocket /> EXPLORE MY WORK
+              <FaRocket className="btn-icon" />
+              EXPLORE MY WORK
             </Link>
             <Link to="/skills" className="hero-btn" onClick={handleButtonClick}>
-              <AiOutlineFileText /> VIEW RESUME
+              <FaFileAlt className="btn-icon" />
+              VIEW RESUME
             </Link>
           </div>
           
           <div className="scroll-indicator">
-            <span>✓ SCROLL TO EXPLORE</span>
-            <AiOutlineDown className="scroll-arrow" />
+            <FaArrowDown className="scroll-icon" />
+            <span>SCROLL TO EXPLORE</span>
           </div>
         </div>
       </div>

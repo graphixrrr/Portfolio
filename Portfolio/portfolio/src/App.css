@@ -1218,4 +1218,83 @@ html {
   60% {
     transform: translateY(-5px);
   }
+}
+
+/* Home Page Icon Styles */
+.icon-greeting {
+  margin-right: 0.5em;
+  color: #4ecdc4;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.icon-description {
+  margin-right: 0.5em;
+  color: #4ecdc4;
+  vertical-align: middle;
+}
+
+.btn-icon {
+  margin-right: 0.4em;
+  transition: transform 0.3s ease;
+}
+
+.hero-btn:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+.scroll-icon {
+  margin-right: 0.5em;
+  animation: bounce 2s ease-in-out infinite;
+  color: #ffd93d;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* About Page Icon Styles */
+.page-icon {
+  margin-right: 0.5em;
+  color: #4ecdc4;
+  vertical-align: middle;
+}
+
+.card-icon {
+  margin-right: 0.5em;
+  color: #ff6b6b;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover .card-icon {
+  transform: scale(1.1);
+}
+
+/* Contact Page Icon Styles */
+.contact-item-icon {
+  margin-right: 0.5em;
+  color: #4ecdc4;
+  font-size: 1.2em;
+}
+
+.arrow-icon {
+  margin-left: 0.3em;
+  transition: transform 0.3s ease;
+}
+
+.visit-btn:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+.cta-icon {
+  margin-right: 0.5em;
+  transition: transform 0.3s ease;
+}
+
+.contact-cta-btn:hover .cta-icon {
+  transform: scale(1.1);
 } 

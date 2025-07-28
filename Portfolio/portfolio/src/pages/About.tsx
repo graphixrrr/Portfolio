@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { 
-  AiOutlineUser, 
-  AiOutlineSetting, 
-  AiOutlineHeart 
-} from 'react-icons/ai';
+import { FaUser, FaLightbulb, FaHeart } from 'react-icons/fa';
 
 const About: React.FC = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
 
   return (
     <div className="about-page page-container">
-      <h1 className="page-title">ABOUT ME</h1>
+      <h1 className="page-title">
+        <FaUser className="page-icon" />
+        ABOUT ME
+      </h1>
       
       <div className="about-intro">
         <p>Get to know the person behind the code - my journey, approach, and passion for creating amazing digital experiences.</p>
@@ -22,7 +21,10 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(0)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3><AiOutlineUser /> WHO I AM</h3>
+          <h3>
+            <FaUser className="card-icon" />
+            WHO I AM
+          </h3>
           <p>
             Hi! I'm Aniket Kumar, a passionate full-stack developer with a deep love for creating 
             beautiful and functional web applications. I enjoy learning new technologies, solving complex problems, 
@@ -35,7 +37,10 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(1)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3><AiOutlineSetting /> MY APPROACH</h3>
+          <h3>
+            <FaLightbulb className="card-icon" />
+            MY APPROACH
+          </h3>
           <p>
             I believe in creating experiences that are not just functional, but also visually stunning 
             and user-friendly. Every project is an opportunity to push boundaries, innovate, and deliver 
@@ -48,7 +53,10 @@ const About: React.FC = () => {
           onMouseEnter={() => setActiveCard(2)}
           onMouseLeave={() => setActiveCard(null)}
         >
-          <h3><AiOutlineHeart /> MY PASSION</h3>
+          <h3>
+            <FaHeart className="card-icon" />
+            MY PASSION
+          </h3>
           <p>
             From coding to problem-solving, I'm driven by curiosity and the desire to create something 
             meaningful. Technology is my canvas, code is my paintbrush, and innovation is my muse. 

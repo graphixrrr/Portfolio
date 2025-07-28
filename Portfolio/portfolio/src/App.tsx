@@ -5,13 +5,6 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
-import { 
-  AiOutlineHome, 
-  AiOutlineUser, 
-  AiOutlineCode, 
-  AiOutlineBarChart, 
-  AiOutlineMail 
-} from 'react-icons/ai';
 import './App.css';
 
 function AppContent() {
@@ -161,11 +154,11 @@ function AppContent() {
             <span className="logo-text">AK</span>
           </div>
           <ul className="nav-links">
-            <li><Link to="/" className="nav-link">{React.createElement(AiOutlineHome as any)} HOME</Link></li>
-            <li><Link to="/about" className="nav-link">{React.createElement(AiOutlineUser as any)} ABOUT</Link></li>
-            <li><Link to="/projects" className="nav-link">{React.createElement(AiOutlineCode as any)} PROJECTS</Link></li>
-            <li><Link to="/skills" className="nav-link">{React.createElement(AiOutlineBarChart as any)} SKILLS</Link></li>
-            <li><Link to="/contact" className="nav-link">{React.createElement(AiOutlineMail as any)} CONTACT</Link></li>
+            <li><Link to="/" className="nav-link">HOME</Link></li>
+            <li><Link to="/about" className="nav-link">ABOUT</Link></li>
+            <li><Link to="/projects" className="nav-link">PROJECTS</Link></li>
+            <li><Link to="/skills" className="nav-link">SKILLS</Link></li>
+            <li><Link to="/contact" className="nav-link">CONTACT</Link></li>
           </ul>
         </div>
       </nav>
