@@ -53,6 +53,19 @@ const Home: React.FC = () => {
     }, 600);
   };
 
+  const handleResumeDownload = (e: React.MouseEvent) => {
+    // Create ripple effect
+    handleButtonClick(e);
+    
+    // Download resume
+    const link = document.createElement('a');
+    link.href = '/Technical Skills.pdf';
+    link.download = 'Aniket_Kumar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="home-page page-container">
       <div className="hero-section">
@@ -81,10 +94,10 @@ const Home: React.FC = () => {
               <FaRocket className="btn-icon" />
               EXPLORE MY WORK
             </Link>
-            <Link to="/skills" className="hero-btn" onClick={handleButtonClick}>
+            <button className="hero-btn" onClick={handleResumeDownload}>
               <FaFileAlt className="btn-icon" />
               VIEW RESUME
-            </Link>
+            </button>
           </div>
           
           <div className="scroll-indicator">
