@@ -59,7 +59,7 @@ const Home: React.FC = () => {
     
     // Download resume
     const link = document.createElement('a');
-    link.href = '/main.pdf';
+    link.href = '/Resume.pdf';
     link.download = 'Aniket_Kumar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
