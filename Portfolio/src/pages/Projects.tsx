@@ -2,61 +2,47 @@ import React, { useState } from 'react';
 
 const projects = [
   { 
-    title: 'Student PA', 
-    desc: 'AI-powered assistant app for students using modern frontend and AI technologies.',
-    details: 'Built with React Native, Tailwind CSS, Flask, AI, Machine Learning, Text-to-Speech. Features include smart AI assistance, modern UI, and seamless user experience.',
-    tech: ['React Native', 'AI', 'Flask', 'Machine Learning', 'Tailwind CSS'],
-    status: 'Live',
-    link: '#'
-  },
-  { 
-    title: 'NUUS - We Put the U in News', 
-    desc: 'Clean, responsive news app with AI-powered article interactions.',
-    details: 'Designed and developed using React Native, JavaScript, Flask, RAG, Tailwind CSS. Features personalized news based on user interests and AI-generated answers.',
-    tech: ['React Native', 'JavaScript', 'Flask', 'RAG', 'Tailwind CSS'],
-    status: 'Live',
-    link: '#'
+    title: 'High School Tech Club Website', 
+    desc: 'Professional website for my high school technology club, showcasing leadership and web development skills.',
+    details: 'Founded and led a technology club at my high school, designing and developing a comprehensive website that serves as the club\'s digital hub. Features include member registration, event management, project showcases, and a blog section. The website helped increase club membership by 300% and facilitated better communication between members.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Leadership'],
+    status: 'Live'
   },
   { 
     title: 'ANNIE AI - Stock Predictor', 
     desc: 'Keras-based neural network for stock price prediction with news integration.',
     details: 'Developed a Keras-based neural network to predict next-day stock prices using historical market data. Built stock news section that summarizes key news and links related articles.',
     tech: ['Keras', 'Deep Learning', 'Financial APIs', 'News Integration', 'Python'],
-    status: 'Live',
-    link: '#'
+    status: 'Live'
   },
   { 
     title: 'AniketBot - AI Symptom Helper', 
     desc: 'AI chatbot providing multi-option symptom relief suggestions.',
     details: 'Created an AI chatbot that provides multi-option symptom relief suggestions based on user input. Covers home remedies, over-the-counter solutions, and lifestyle adjustments.',
     tech: ['AI', 'Natural Language Processing', 'Health Tools', 'Python'],
-    status: 'Live',
-    link: '#'
+    status: 'Live'
   },
   { 
     title: 'Portfolio Website', 
     desc: 'Modern, responsive portfolio website with stunning black and white design.',
     details: 'Built with React, TypeScript, and modern CSS. Features interactive animations, smooth transitions, and a minimalist design that showcases creativity and technical skills.',
     tech: ['React', 'TypeScript', 'CSS3', 'Responsive Design'],
-    status: 'Live',
-    link: '#'
+    status: 'Live'
   },
   { 
     title: 'E-Commerce Platform', 
     desc: 'Full-stack e-commerce solution with modern UI and secure payment integration.',
     details: 'Developed a complete e-commerce platform with user authentication, product management, shopping cart, and secure payment processing using Stripe integration.',
     tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Express'],
-    status: 'In Development',
-    link: '#'
+    status: 'In Development'
   }
 ];
 
 const Projects: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="projects-page">
+    <div className="projects-page page-container">
       <h1 className="page-title">PROJECTS</h1>
       
       <div className="projects-intro">
@@ -67,8 +53,7 @@ const Projects: React.FC = () => {
         {projects.map((project, idx) => (
           <div
             key={project.title}
-            className={`project-card interactive-element ${openIndex === idx ? 'expanded' : ''} ${hoveredIndex === idx ? 'hovered' : ''}`}
-            onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+            className={`project-card interactive-element ${hoveredIndex === idx ? 'hovered' : ''}`}
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
@@ -79,7 +64,6 @@ const Projects: React.FC = () => {
                   {project.status}
                 </span>
               </div>
-              <span className="expand-icon">{openIndex === idx ? '−' : '+'}</span>
             </div>
             
             <p className="project-desc">{project.desc}</p>
@@ -90,16 +74,9 @@ const Projects: React.FC = () => {
               ))}
             </div>
             
-            {openIndex === idx && (
-              <div className="project-details">
-                <p>{project.details}</p>
-                <div className="project-actions">
-                  <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                    VIEW PROJECT →
-                  </a>
-                </div>
-              </div>
-            )}
+            <div className="project-details">
+              <p>{project.details}</p>
+            </div>
           </div>
         ))}
       </div>
