@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
 const projects = [
   { 
@@ -11,16 +12,18 @@ const projects = [
   { 
     title: 'ANNIE AI - Stock Predictor', 
     desc: 'Keras-based neural network for stock price prediction with news integration.',
-    details: 'Developed a Keras-based neural network to predict next-day stock prices using historical market data. Built stock news section that summarizes key news and links related articles.',
+    details: 'Developed a Keras-based neural network to predict next-day stock prices using historical market data. Built stock news section that summarizes key news and links related articles. Watch the demo to see the AI in action!',
     tech: ['Keras', 'Deep Learning', 'Financial APIs', 'News Integration', 'Python'],
-    status: 'Live'
+    status: 'Live',
+    demoLink: 'https://www.youtube.com/watch?v=7TvxxN3E_4o'
   },
   { 
     title: 'AniketBot - AI Symptom Helper', 
     desc: 'AI chatbot providing multi-option symptom relief suggestions.',
-    details: 'Created an AI chatbot that provides multi-option symptom relief suggestions based on user input. Covers home remedies, over-the-counter solutions, and lifestyle adjustments.',
+    details: 'Created an AI chatbot that provides multi-option symptom relief suggestions based on user input. Covers home remedies, over-the-counter solutions, and lifestyle adjustments. Watch the demo to see the AI chatbot in action!',
     tech: ['AI', 'Natural Language Processing', 'Health Tools', 'Python'],
-    status: 'Live'
+    status: 'Live',
+    demoLink: 'https://www.youtube.com/watch?v=9pH9489faCY'
   },
   { 
     title: 'Portfolio Website', 
@@ -76,6 +79,17 @@ const Projects: React.FC = () => {
             
             <div className="project-details">
               <p>{project.details}</p>
+              {project.demoLink && (
+                <a 
+                  href={project.demoLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="demo-link"
+                >
+                  <FaArrowRight className="demo-icon" />
+                  Watch Demo
+                </a>
+              )}
             </div>
           </div>
         ))}

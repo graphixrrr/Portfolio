@@ -1369,4 +1369,37 @@ html {
   .resume-download-section {
     margin: 1.5rem 0 2rem 0;
   }
+}
+
+/* Demo Link Styles */
+.demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.demo-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  color: white;
+}
+
+.demo-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.demo-link:hover .demo-icon {
+  transform: translateX(3px);
 } 
