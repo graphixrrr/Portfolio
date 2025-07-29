@@ -1,8 +1,17 @@
 import React, { useState } from 'react';
-import { FaUser, FaLightbulb, FaHeart } from 'react-icons/fa';
+import { FaUser, FaLightbulb, FaHeart, FaFileAlt } from 'react-icons/fa';
 
 const About: React.FC = () => {
   const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Technical Skills.pdf';
+    link.download = 'Aniket_Kumar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <div className="about-page page-container">
@@ -13,6 +22,17 @@ const About: React.FC = () => {
       
       <div className="about-intro">
         <p>Get to know the person behind the code - my journey, approach, and passion for creating amazing digital experiences.</p>
+      </div>
+
+      {/* Resume Download Button */}
+      <div className="resume-download-section">
+        <button 
+          className="resume-download-btn interactive-element"
+          onClick={handleDownloadResume}
+        >
+          <FaFileAlt className="download-icon" />
+          Download Resume
+        </button>
       </div>
       
       <div className="about-cards">
