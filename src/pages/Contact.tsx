@@ -26,9 +26,9 @@ const Contact: React.FC = () => {
     },
     {
       title: 'LINKEDIN',
-      content: 'linkedin.com/in/aniketkumar',
+      content: 'linkedin.com/in/aniket-kumar-1ba7a2366',
       action: 'VISIT',
-      link: 'https://linkedin.com/in/aniketkumar',
+      link: 'https://www.linkedin.com/in/aniket-kumar-1ba7a2366/',
       isLink: true,
       icon: FaLinkedin
     },
