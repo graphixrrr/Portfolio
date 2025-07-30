@@ -22,13 +22,7 @@ const projects = [
     tech: ['AI', 'Natural Language Processing', 'Health Tools', 'Python'],
     status: 'Live'
   },
-  { 
-    title: 'Portfolio Website', 
-    desc: 'Modern, responsive portfolio website with stunning black and white design.',
-    details: 'Built with React, TypeScript, and modern CSS. Features interactive animations, smooth transitions, and a minimalist design that showcases creativity and technical skills.',
-    tech: ['React', 'TypeScript', 'CSS3', 'Responsive Design'],
-    status: 'Live'
-  },
+
   { 
     title: 'E-Commerce Platform', 
     desc: 'Full-stack e-commerce solution with modern UI and secure payment integration.',
