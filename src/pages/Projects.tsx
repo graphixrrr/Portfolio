@@ -3,19 +3,26 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const projects = [
   { 
-    title: 'High School Tech Club Website', 
-    desc: 'Professional website for my high school technology club, showcasing leadership and web development skills.',
-    details: 'Founded and led a technology club at my high school, designing and developing a comprehensive website that serves as the club\'s digital hub. Features include member registration, event management, project showcases, and a blog section. The website helped increase club membership by 300% and facilitated better communication between members.',
-    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Leadership'],
-    status: 'Live'
-  },
-  { 
     title: 'ANNIE AI - Stock Predictor', 
     desc: 'Keras-based neural network for stock price prediction with news integration.',
     details: 'Developed a Keras-based neural network to predict next-day stock prices using historical market data. Built stock news section that summarizes key news and links related articles. Watch the demo to see the AI in action!',
     tech: ['Keras', 'Deep Learning', 'Financial APIs', 'News Integration', 'Python'],
     status: 'Live',
     demoLink: 'https://www.youtube.com/watch?v=7TvxxN3E_4o'
+  },
+  { 
+    title: 'NewsAI - Personalized News Platform', 
+    desc: 'AI-powered personalized news aggregator with adaptive learning algorithms and comprehensive reading analytics.',
+    details: 'Developed an intelligent news platform that learns user preferences through active algorithms based on reading patterns. Features multiple news sections (Technology, Science, Business, Politics, Sports, Entertainment) with real-time content curation. Advanced analytics track articles read, reading time, engagement metrics, and reading patterns. The AI continuously adapts recommendations based on user behavior, creating a truly personalized news experience.',
+    tech: ['React', 'Node.js', 'Machine Learning', 'News APIs', 'Analytics', 'MongoDB'],
+    status: 'Live'
+  },
+  { 
+    title: 'QuizMath AI - Intelligent Math Solver', 
+    desc: 'AI-powered math problem solver with step-by-step solutions and personalized learning support.',
+    details: 'Created an advanced math problem solver that allows users to input any mathematical question from final exams or coursework. The AI provides detailed step-by-step solutions with explanations, helping students understand the problem-solving process. Features include a comprehensive progress tracker, personalized learning recommendations, and AI tutoring support for complex problems. Supports various math topics including algebra, calculus, geometry, and statistics.',
+    tech: ['Python', 'AI/ML', 'Natural Language Processing', 'React', 'Mathematics APIs'],
+    status: 'Live'
   },
   { 
     title: 'AniketBot - AI Symptom Helper', 
@@ -26,10 +33,10 @@ const projects = [
     demoLink: 'https://www.youtube.com/watch?v=9pH9489faCY'
   },
   { 
-    title: 'Portfolio Website', 
-    desc: 'Modern, responsive portfolio website with stunning black and white design.',
-    details: 'Built with React, TypeScript, and modern CSS. Features interactive animations, smooth transitions, and a minimalist design that showcases creativity and technical skills.',
-    tech: ['React', 'TypeScript', 'CSS3', 'Responsive Design'],
+    title: 'High School Tech Club Website', 
+    desc: 'Professional website for my high school technology club, showcasing leadership and web development skills.',
+    details: 'Founded and led a technology club at my high school, designing and developing a comprehensive website that serves as the club\'s digital hub. Features include member registration, event management, project showcases, and a blog section. The website helped increase club membership by 300% and facilitated better communication between members.',
+    tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Leadership'],
     status: 'Live'
   },
   { 
