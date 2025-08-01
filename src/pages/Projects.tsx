@@ -15,14 +15,16 @@ const projects = [
     desc: 'AI-powered personalized news aggregator with adaptive learning algorithms and comprehensive reading analytics.',
     details: 'Developed an intelligent news platform that learns user preferences through active algorithms based on reading patterns. Features multiple news sections (Technology, Science, Business, Politics, Sports, Entertainment) with real-time content curation. Advanced analytics track articles read, reading time, engagement metrics, and reading patterns. The AI continuously adapts recommendations based on user behavior, creating a truly personalized news experience.',
     tech: ['React', 'Node.js', 'Machine Learning', 'News APIs', 'Analytics', 'MongoDB'],
-    status: 'Live'
+    status: 'Live',
+    demoLink: 'https://www.youtube.com/watch?v=2EYHWlAq8fU'
   },
   { 
     title: 'QuizMath AI - Intelligent Math Solver', 
     desc: 'AI-powered math problem solver with step-by-step solutions and personalized learning support.',
     details: 'Created an advanced math problem solver that allows users to input any mathematical question from final exams or coursework. The AI provides detailed step-by-step solutions with explanations, helping students understand the problem-solving process. Features include a comprehensive progress tracker, personalized learning recommendations, and AI tutoring support for complex problems. Supports various math topics including algebra, calculus, geometry, and statistics.',
     tech: ['Python', 'AI/ML', 'Natural Language Processing', 'React', 'Mathematics APIs'],
-    status: 'Live'
+    status: 'Live',
+    demoLink: 'https://www.youtube.com/watch?v=NOGtOjYryqQ'
   },
   { 
     title: 'AniketBot - AI Symptom Helper', 
