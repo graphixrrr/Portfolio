@@ -35,6 +35,13 @@ const projects = [
     demoLink: 'https://www.youtube.com/watch?v=9pH9489faCY'
   },
   { 
+    title: 'Mark AI - Voice Assistant', 
+    desc: 'Personal AI assistant with voice control: answers questions, opens websites, and supports multiple voices.',
+    details: 'Built a voice-first personal assistant that listens to commands like "Hey Mark, go on Amazon" and redirects to requested sites (e.g., amazon.com). Supports general Q&A with AI, website navigation, and customizable voices using text-to-speech. Includes continuous listening, wake word detection, and command parsing for smooth hands-free browsing.',
+    tech: ['React', 'Node.js', 'Speech Recognition', 'Text-to-Speech', 'OpenAI'],
+    status: 'Live'
+  },
+  { 
     title: 'High School Tech Club Website', 
     desc: 'Professional website for my high school technology club, showcasing leadership and web development skills.',
     details: 'Founded and led a technology club at my high school, designing and developing a comprehensive website that serves as the club\'s digital hub. Features include member registration, event management, project showcases, and a blog section. The website helped increase club membership by 300% and facilitated better communication between members.',
