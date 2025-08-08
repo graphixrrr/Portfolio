@@ -95,18 +95,18 @@ const Projects: React.FC = () => {
             
             <div className="project-details">
               <p>{project.details}</p>
-              {project.demoLink && (
-                <a 
-                  href={project.demoLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="demo-link"
-                >
-                  <FaArrowRight className="demo-icon" />
-                  Watch Demo
-                </a>
-              )}
             </div>
+            {project.demoLink && (
+              <a 
+                href={project.demoLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="demo-link"
+              >
+                <FaArrowRight className="demo-icon" />
+                Watch Demo
+              </a>
+            )}
           </div>
         ))}
       </div>
