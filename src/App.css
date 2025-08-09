@@ -501,10 +501,12 @@ body {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem;
+  padding-bottom: 4.5rem;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  position: relative;
 }
 
 .project-card:hover {
@@ -591,14 +593,12 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1rem;
   margin-top: 1rem;
-  position: relative;
-  min-height: 120px;
 }
 
 .project-details p {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin-bottom: 4rem;
+  margin-bottom: 0;
 }
 
 
@@ -1378,18 +1378,18 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   text-decoration: none;
   border-radius: 25px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 1.5rem;
+  left: 2rem;
   z-index: 10;
 }
 
